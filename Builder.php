@@ -80,6 +80,7 @@ class Builder
      */
     protected function extractAnnotations()
     {
+        // First element is an array.
         if ($this->_st_classes && is_array(current($this->_st_classes))) {
             return $this->_st_classes;
         }

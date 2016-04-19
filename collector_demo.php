@@ -18,6 +18,7 @@ use Crada\Apidoc\Exception;
 use Crada\Apidoc\Collector;
 
 $docs = array();
+
 $c = new Collector;
 $docs[] = $c->description('User', 'Retrieve an User Info.')->route('/api/user/{id}')->build();
 $docs[] = $c->description('User', 'Create User.')->method('post')->route('/api/user')
