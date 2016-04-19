@@ -80,6 +80,10 @@ class Builder
      */
     protected function extractAnnotations()
     {
+        if ($this->_st_classes && is_array(current($this->_st_classes))) {
+            return $this->_st_classes;
+        }
+
         foreach ($this->_st_classes as $class) {
             $st_output[] = Extractor::getAllClassAnnotations($class);
         }
